@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+ <title>Signup Page</title>
+ <head> 
+ <h2>Signup Page </h2>
+ </head>
+ <div class="centered">
+    
+  <div class="container">
+  <form onsubmit ="return verifyPassword()">  
+    
+    <label for="username">Username :</label>
+    <input type="text" id="username" name="Username" placeholder="Your name.."><br><br>
+	
+	<label>Password :</label>  
+  <input type = "password" id = "pswd" value = "" placeholder="Your Password..">   
+  <span id = "message" style="color:red"> </span> <br><br>
+	  
+	<input type = "submit" value = "Submit">  
+  </form>
+  
+<script>  
+function verifyPassword() {  
+  var pw = document.getElementById("pswd").value;  
+  
+  if(pw == "") {  
+     document.getElementById("message").innerHTML = "Fill the password please!";  
+     return false;  
+  }  
+   
+
+  if(pw.length > 10) {  
+     document.getElementById("message").innerHTML = "Password length must not exceed 10 characters";  
+     return false;  
+  } else {  
+     alert("Password is correct");  
+  }  
+}  
+
+ 
+
+
+</script>  
+    
+ 
+ 
+
+</html>
